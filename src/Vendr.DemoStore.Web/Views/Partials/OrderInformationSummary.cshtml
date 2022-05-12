@@ -2,12 +2,12 @@
 @inherits Umbraco.Web.Mvc.UmbracoViewPage<IOrderReviewPage>
 
 <div class="border border-gray-300 p-6 rounded mb-8">
-    <h3 class="text-xl font-medium mb-4">Contact Information</h3>
+    <h3 class="text-xl font-medium mb-4">Contact Informatie</h3>
     <p class="mb-4">@Model.Order.CustomerInfo.Email</p>
 
     <div class="flex w-full -mx-2">
         <div class="flex-1 mx-2">
-            <h3 class="text-xl font-medium mb-4">Billing Information</h3>
+            <h3 class="text-xl font-medium mb-4">Betaling Informatie</h3>
             <p class="">
                 <strong>@Model.Order.CustomerInfo.FirstName @Model.Order.CustomerInfo.LastName</strong>
                 <br />
@@ -21,7 +21,7 @@
             </p>
         </div>
         <div class="flex-1 mx-2">
-            <h3 class="text-xl font-medium mb-4">Shipping Information</h3>
+            <h3 class="text-xl font-medium mb-4">Verzending Informatie</h3>
             <p class="">
                 <strong>@Model.Order.Properties["shippingFirstName"] @Model.Order.Properties["shippingLastName"]</strong>
                 <br />

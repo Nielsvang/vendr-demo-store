@@ -17,7 +17,7 @@
         <script>
             document.addEventListener('DOMContentLoaded', function () {
                 Toastify({
-                    text: "Item successfully added to cart",
+                    text: "Item toegevoegd aan winkelmand",
                     duration: 3000,
                     gravity: "bottom", // `top` or `bottom`
                     position: 'center', // `left`, `center` or `right`
@@ -106,18 +106,18 @@
                     @RenderVariants(store, Model, addedProductReference)
                 </div>
 
-                <button id="add-to-cart" class="font-bold border-4 border-gray-900 px-6 py-3 mb-4 lg:w-1/2 hover:bg-teal-400 hover:border-teal-400 hover:text-white" type="submit">Add to Cart</button>
+                <button id="add-to-cart" class="font-bold border-4 border-gray-900 px-6 py-3 mb-4 lg:w-1/2 hover:bg-teal-400 hover:border-teal-400 hover:text-white" type="submit">Toevoegen aan winkelmand</button>
             }
             <div class="flex">
-                <a href="#" class="mr-4 hover:text-teal-400"><i class="fa fa-facebook-square"></i> Share it</a>
-                <a href="#" class="mr-4 hover:text-teal-400"><i class="fa fa-twitter"></i> Tweet it</a>
-                <a href="#" class="mr-4 hover:text-teal-400"><i class="fa fa-pinterest"></i> Pin it</a>
+                <a href="#" class="mr-4 hover:text-teal-400"><i class="fa fa-facebook-square"></i> Deel het</a>
+                <a href="#" class="mr-4 hover:text-teal-400"><i class="fa fa-twitter"></i> Tweet het</a>
+                <a href="#" class="mr-4 hover:text-teal-400"><i class="fa fa-pinterest"></i> Pin het</a>
             </div>
         </div>
     </div>
     <hr class="my-6" />
     <div>
-        <h2 class="text-2xl font-bold">Description</h2>
+        <h2 class="text-2xl font-bold">Beschrijving</h2>
         <div class="rte">
             @Model.LongDescription
         </div>

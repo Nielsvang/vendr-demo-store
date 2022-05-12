@@ -6,17 +6,17 @@
     {
         if (Model.PreviousStep != null)
         {
-        <div><a href="@(Model.PreviousStep.Url)" class="text-@(Model.CheckoutPage.PrimaryColor) hover:text-gray-900 hover:underline"><i class="fa fa-angle-left"></i> Return to @(Model.PreviousStep.Name)</a></div>
+        <div><a href="@(Model.PreviousStep.Url)" class="text-@(Model.CheckoutPage.PrimaryColor) hover:text-gray-900 hover:underline"><i class="fa fa-angle-left"></i> Terug naar @(Model.PreviousStep.Name)</a></div>
         }
         else
         {
-        <div><a href="@(Model.HomePage.CartPage.Url)" class="text-@(Model.CheckoutPage.PrimaryColor) hover:text-gray-900 hover:underline"><i class="fa fa-angle-left"></i> Return to Cart</a></div>
+        <div><a href="@(Model.HomePage.CartPage.Url)" class="text-@(Model.CheckoutPage.PrimaryColor) hover:text-gray-900 hover:underline"><i class="fa fa-angle-left"></i> Terug naar winkelmand</a></div>
         }
     }
     @if (Model.NextStep != null)
     {
         <div class="mb-4 w-full md:mb-0 md:w-auto">
-            <button class="bg-@(Model.CheckoutPage.PrimaryColor) text-white px-4 py-4 w-full rounded hover:bg-gray-900" type="submit">Continue to @(Model.NextStep.Name)</button>
+            <button class="bg-@(Model.CheckoutPage.PrimaryColor) text-white px-4 py-4 w-full rounded hover:bg-gray-900" type="submit">Door naar @(Model.NextStep.Name)</button>
         </div>
     }
 </div>

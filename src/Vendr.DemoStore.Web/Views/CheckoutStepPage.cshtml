@@ -34,8 +34,8 @@
 
         <a id="order-summary-toggle" href="#" class="flex items-center justify-between border-t border-b border-gray-300 bg-gray-100 lg:hidden">
             <span class="py-4 px-8 text-lg">
-                <span id="order-summary-toggle__text-closed"><i class="fa fa-shopping-cart mr-2"></i> Show Order Summary <i class="fa fa-angle-down ml-1"></i></span>
-                <span id="order-summary-toggle__text-open" class="hidden"><i class="fa fa-shopping-cart mr-2"></i> Hide Order Summary <i class="fa fa-angle-up ml-1"></i></span>
+                <span id="order-summary-toggle__text-closed"><i class="fa fa-shopping-cart mr-2"></i> Toon bestelling geschiedenis <i class="fa fa-angle-down ml-1"></i></span>
+                <span id="order-summary-toggle__text-open" class="hidden"><i class="fa fa-shopping-cart mr-2"></i> Verberg bestelling geschiedenis <i class="fa fa-angle-up ml-1"></i></span>
             </span>
             <span class="py-4 px-8 text-lg font-medium">@Model.Order.TotalPrice.Value.Formatted().WithoutTax</span>
         </a>
@@ -79,7 +79,7 @@
             @RenderSection("aside", false)
 
             <div class="flex w-full justify-between items-center">
-                <div class="">Subtotal</div>
+                <div class="">Subtotaal</div>
                 <div class="font-medium">@(Model.Order.SubtotalPrice.WithoutAdjustments.Formatted().WithoutTax)</div>
             </div>
 
@@ -87,7 +87,7 @@
             {
                 <div class="flex w-full justify-between items-center mt-2">
                     <div class="">
-                        Shipping via @(Model.ShippingMethod.Name)
+                        Verzending via @(Model.ShippingMethod.Name)
                     </div>
                     <div class="font-medium">@(Model.Order.ShippingInfo.TotalPrice.WithoutAdjustments.Formatted().WithoutTax)</div>
                 </div>
@@ -97,7 +97,7 @@
             {
                 <div class="flex w-full justify-between items-center mt-2">
                     <div class="">
-                        Payment via @(Model.PaymentMethod.Name)
+                        Betaling via @(Model.PaymentMethod.Name)
                     </div>
                     <div class="font-medium">@(Model.Order.PaymentInfo.TotalPrice.WithoutAdjustments.Formatted().WithoutTax)</div>
                 </div>
@@ -108,21 +108,21 @@
                 if (totalDiscount != 0)
                 {
                     <div class="flex w-full justify-between items-center mt-2 ">
-                        <div class="">Discounts</div>
+                        <div class="">Korting(en)</div>
                         <div class="font-medium">@(totalDiscount.Formatted().WithoutTax)</div>
                     </div>
                 }
             }
 
             <div class="flex w-full justify-between items-center mt-2">
-                <div class="">TAX</div>
+                <div class="">BTW</div>
                 <div class="font-medium">@(Model.Order.TotalPrice.Value.Formatted().Tax)</div>
             </div>
 
             @foreach (var giftCardAdjustment in Model.Order.TransactionAmount.Adjustments.OfType<GiftCardAdjustment>())
             {
                 <div class="flex w-full justify-between items-center mt-2">
-                    <div class="">Gift Card (@(giftCardAdjustment.GiftCardCode))</div>
+                    <div class="">Cadeaubon (@(giftCardAdjustment.GiftCardCode))</div>
                     <div class="font-medium">@(giftCardAdjustment.Amount.Formatted())</div>
                 </div>
             }
@@ -130,7 +130,7 @@
             <hr class="border-t border-gray-300 my-4" />
 
             <div class="flex w-full justify-between items-center">
-                <div class="font-medium text-base">Total</div>
+                <div class="font-medium text-base">Totaal</div>
                 <div class="font-medium text-2xl">@Model.Order.TransactionAmount.Value.Formatted()</div>
             </div>
 
